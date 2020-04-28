@@ -32,7 +32,7 @@ public class emitter {
 			}
 
 			// Send the message to the queue
-			producer.send(new ProducerRecord<String, String>(TOPIC_NAME, "key-" + message, message));
+			producer.send(new ProducerRecord<String, String>(TOPIC_NAME, null, message));
 			System.out.println("Sent '" + message + "'");
 		}
 	}
